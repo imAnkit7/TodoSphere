@@ -29,7 +29,7 @@ const Mytodos = (props) => {
 
     const token = localStorage.getItem('token')
     const getTodo = async () => {
-        const data = await fetch('http://localhost:5000/todos', {
+        const data = await fetch('https://todo-backend-ybko.onrender.com/todos', {
             method: 'get',
             headers: {
                 'Authorization': `Bearer ${token}` // Attach the token in the header
@@ -43,7 +43,6 @@ const Mytodos = (props) => {
         }
 
         const result = await data.json()
-        // console.log(new Date(result[1].createdAt).toLocaleString())
         SetData(result)
         console.log(data)
         setFilteredData(result)
@@ -54,7 +53,7 @@ const Mytodos = (props) => {
             alert('Session expire! please login')
             navigate('/')
         } else {
-            const result = await fetch(`http://localhost:5000/todos/${id}`, {
+            const result = await fetch(`https://todo-backend-ybko.onrender.com/todos/${id}`, {
                 method: 'Delete',
                 headers: {
                     'Authorization': `Bearer ${token}` // Attach the token in the header
@@ -80,7 +79,7 @@ const Mytodos = (props) => {
     const histTodo = async (id) => {
         const isConfrim = window.confirm("Are you sure ! You will see it in Complted task")
         if (isConfrim) {
-            const result = await fetch(`http://localhost:5000/past/${id}`, {
+            const result = await fetch(`https://todo-backend-ybko.onrender.com/past/${id}`, {
                 method: 'PATCH',
                 body: JSON.stringify({ status: "completed" }),
                 headers: {

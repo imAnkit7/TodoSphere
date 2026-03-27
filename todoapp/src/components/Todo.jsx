@@ -26,7 +26,7 @@ const Todo = (props) => {
             toast.warning("Please enter task & select Priority");
 
         } else {
-            const insert = await fetch('http://localhost:5000/add', {
+            const insert = await fetch('https://todo-backend-ybko.onrender.com/add', {
                 method: 'post',
                 body: JSON.stringify({ task: todo, priority: priority }),
                 headers: {

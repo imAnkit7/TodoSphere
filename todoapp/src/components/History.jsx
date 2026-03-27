@@ -9,7 +9,7 @@ export default function History(props) {
   const {completedCount, setCompletedCount}=useContext(HistLenContext);
   const token = localStorage.getItem('token')
   const getFunc = async () => {
-    const histData = await fetch("http://localhost:5000/past", {
+    const histData = await fetch("https://todo-backend-ybko.onrender.com/past", {
       method: 'get',
       headers: {
         'Authorization': `Bearer ${token}` // Attach the token in the header
@@ -33,7 +33,7 @@ export default function History(props) {
       alert('Session expire! please login')
       navigate('/')
     } else {
-      const result = await fetch(`http://localhost:5000/todos/${id}`, {
+      const result = await fetch(`https://todo-backend-ybko.onrender.com/todos/${id}`, {
         method: 'Delete',
         headers: {
           'Authorization': `Bearer ${token}` // Attach the token in the header

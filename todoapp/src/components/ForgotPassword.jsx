@@ -9,7 +9,8 @@ function ForgotPassword() {
 
     const handleReset = async () => {
 
-        const update = await fetch("http://localhost:5000/forgot-password", {
+        // const update = await fetch("http://localhost:5000/forgot-password", {
+        const update = await fetch("https://todo-backend-ybko.onrender.com/forgot-password", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

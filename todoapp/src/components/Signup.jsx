@@ -20,7 +20,7 @@ const Signup = () => {
         }
         else {
 
-            const insert = await fetch('http://localhost:5000/user', {
+            const insert = await fetch('https://todo-backend-ybko.onrender.com/user', {
                 method: 'post',
                 body: JSON.stringify({ username: uname, email: emailid, password: pass }),
                 headers: {
