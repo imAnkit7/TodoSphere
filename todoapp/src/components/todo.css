@@ -1,0 +1,139 @@
+.WholeContainer {
+    padding-top: 70px;
+}
+
+.container {
+    border-radius: 10px;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn {
+    background-color: green;
+    color: #fff;
+}
+
+.btnAdd {
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 15px 0;
+}
+
+.box {
+    display: flex;
+}
+
+.box input {
+    margin: 15px 15px 0 0;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 2vh 0;
+}
+
+.showPriority.urgent {
+    color: red;
+}
+
+.showPriority.important {
+    color: rgb(71, 38, 236);
+}
+
+.publicBtn {
+    background: #b318de;
+    /* background: green; */
+    color: #fff;
+    height: 10%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* login */
+.Logincontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginCard {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.inSideCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+}
+
+/* Filter component  */
+
+@media (max-width: 770px) {
+    .WholeContainer {
+        width: 100%;
+        /* background: #000; */
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: none;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 545px) {
+    .WholeContainer {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: none;
+        margin-top: 15px;
+        border-radius: 0%;
+        padding: 0%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
+    }
+
+    .show {
+        flex-direction: column;
+        width: 100%;
+    }
+    .addBox{
+        flex-direction: column;
+    }
+}
