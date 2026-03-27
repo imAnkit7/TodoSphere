@@ -129,5 +129,8 @@ app.post("/forgot-password", async (req, res) => {
     res.json({ message: "Password Updated" })
 
 })
+app.get("/", (req, res) => {
+  res.send("Todo Backend Running");
+});
 
 app.listen(5000, () => console.log('port is running'))
